@@ -41,7 +41,7 @@
   <![endif]-->
   <base url="<?php echo site_url();?>" class-attr="<?php echo $this->router->fetch_class();?>"/>
 </head>
-<?php if($this->is_login){?>
+<?php if($this->is_login == true){?>
 	<?php $this->load->view('element/header');?>
 	<?php $this->load->view('element/sidebar');?> 
 <?php } ?>

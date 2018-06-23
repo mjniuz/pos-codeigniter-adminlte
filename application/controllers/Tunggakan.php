@@ -13,7 +13,7 @@ class Tunggakan extends MY_Controller
         $this->load->model('kategori_model');
 
         // Check Session Login
-        if (!isset($_SESSION['logged_in'])) {
+        if (isset($this->session->logged_in)) {
             redirect(site_url('auth/login'));
         }
     }

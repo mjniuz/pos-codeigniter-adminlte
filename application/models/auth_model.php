@@ -10,6 +10,12 @@ class Auth_model extends CI_Model {
 		$query = $this->db->get_where("user",array("username" => $username, "password" => $password) );
 		return $query->result();
 	}
+
+	public function dump_profile($id){
+		$query = $this->db->get_where("user",array("id" => $id) );
+		return $query->result_array();
+	}
+
 	public function get_profile($user_id){
 		$query = $this->db->get_where("user",array("id" => $user_id) );
 		return $query->result();

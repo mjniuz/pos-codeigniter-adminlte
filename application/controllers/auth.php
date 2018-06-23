@@ -6,6 +6,7 @@ class Auth extends MY_Controller {
         parent::__construct();
 		$this->load->model('auth_model');
         $this->load->library('form_validation');		
+        $this->load->helper('url');
 	}
 	
 	function index(){
@@ -36,9 +37,9 @@ class Auth extends MY_Controller {
 			$this->auth_model->set_session($_COOKIE['remember_me']);
 			redirect(site_url());
 		}
-		$username = escape($this->input->post("username"));		
-		$password = md5(escape($this->input->post("password")));
-		$remember_me = escape($this->input->post("remember_me"));	
+		$username = $this->input->post("username");		
+		$password = $this->input->post("password");
+		$remember_me = $this->input->post("remember_me");	
 		if($username && $password){
 			$check_login = $this->auth_model->check_login($username,$password);	
 		}

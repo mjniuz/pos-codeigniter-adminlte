@@ -1,3 +1,4 @@
+<?php echo "TEXT"; ?>
 <?php $this->load->view('element/head');?>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">

@@ -1,4 +1,4 @@
-<?php if($this->is_login){?>
+<?php if($this->session->logged_in){?>
 	<?php $this->load->view('element/main_footer');?>
 	<?php $this->load->view('element/control_bar');?>
 <?php } ?>
