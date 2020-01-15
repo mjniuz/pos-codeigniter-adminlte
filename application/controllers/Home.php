@@ -11,6 +11,7 @@ class Home extends MY_Controller {
 		$this->load->model('kategori_model');
         $this->load->model('penjualan_model');
         $this->load->model('retur_penjualan_model');
+        $this->load->helper('url','form','site_helper');
 		
 		// Check Session Login
 		if(!isset($_SESSION['logged_in'])){
@@ -49,7 +50,7 @@ class Home extends MY_Controller {
 		$filter['DATE(sales_transaction.date) >='] = $yesterday;
 		$filter['DATE(sales_transaction.date) <='] = $today;
 
-		$penjualans = $this->penjualan_model->get_filter($filter,url_param());
+		$penjualans = $this->penjualan_model->get_filter($filter,$bulanan);
 		return $penjualans;
 	}
 }

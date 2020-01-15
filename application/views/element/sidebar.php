@@ -8,7 +8,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="<?php echo $this->user_photo;?>" class="img-circle" alt="User Image">
+          <img src="<?php echo base_url(); ?>public/uploads/chalange_accepted.png" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p><?php echo $this->username;?></p>
@@ -89,6 +89,13 @@
           <ul class="treeview-menu">
             <li class="<?php echo is_menu('retur_purchase');?>"><a href="<?php echo site_url('retur_purchase');?>"><i class="fa fa-share" aria-hidden="true"></i> <span>List Retur Purchase</span></a></li>
             <li class="<?php echo is_menu('retur_purchase','create');?>"><a href="<?php echo site_url('retur_purchase/create');?>"><i class="fa fa-plus-square-o" aria-hidden="true"></i> <span>Add Retur Purchase</span></a></li>
+          </ul>
+        </li>
+        <li class="treeview <?php echo is_menu('pegawai');?>">
+          <a href="#"><i class="fa fa-users"></i> <span>Pegawai</span> <i class="fa fa-angle-left pull-right"></i></a>
+          <ul class="treeview-menu">
+            <li class="<?php echo is_menu('pegawai');?>"><a href="<?php echo site_url('pegawai');?>"><i class="fa fa-share" aria-hidden="true"></i> <span>List Pegawai</span></a></li>
+            <li class="<?php echo is_menu('pegawai','add');?>"><a href="<?php echo site_url('pegawai/add');?>"><i class="fa fa-plus-square-o" aria-hidden="true"></i> <span>Add Pegawai</span></a></li>
           </ul>
         </li>
       </ul>

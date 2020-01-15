@@ -27,14 +27,14 @@
             <!-- Menu Toggle Button -->
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <!-- The user image in the navbar-->
-              <img src="<?php echo $this->user_photo;?>" class="user-image" alt="User Image">
+              <img src="<?php echo base_url(); ?>public/uploads/chalange_accepted.png" class="user-image" alt="User Image">
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
               <span class="hidden-xs"><?php echo $this->username;?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
               <li class="user-header">
-                <img src="<?php echo $this->user_photo;?>" class="img-circle" alt="User Image">
+                <img src="<?php echo base_url(); ?>public/uploads/chalange_accepted.png" class="img-circle" alt="User Image">
 
                 <p>
                   <?php echo $this->username;?>
